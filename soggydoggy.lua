@@ -7,7 +7,18 @@ print('this is only for 2 players at the moment! sorry')
 
 print("whats player 1's name?")
 
-local players = { p1name = '', p2name = '', } 
+local players = {
+     { 
+          name = '', 
+          number = 0
+     },
+     { 
+          name = '', 
+          number = 0
+     } 
+}
+
+
 
 print("whats player 2s name?")
 
@@ -33,7 +44,7 @@ local turnsTaken = 0
 
 local playerWon = false
 
-local whoseTurn = p1name
+local whoseTurn = 1
 
 local diceValue = nil
 
@@ -68,6 +79,8 @@ local function rollTheDice()
 print('Where rolling the dice for you, ' .. whoseTurn .. '!')
 
 diceValue = math.random(6)
+
+players[whoseTurn].number
 
 if whoseTurn == p1name then 
     if diceValue == 1 then 
