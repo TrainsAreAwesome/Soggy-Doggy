@@ -7,17 +7,21 @@ print('this is only for 2 players at the moment! sorry')
 
 print("whats player 1's name?")
 
-local p1name = io.read()
+local players = { p1name = '', p2name = '', } 
 
 print("whats player 2s name?")
 
-local p2name = io.read()
+local  = io.read()
 
 print('Click enter to start!')
 
 io.read()
 
 -- the game itself (rewriten)
+
+-- other stuff
+
+math.randomseed(os.time())
 
 -- variables
 
@@ -32,9 +36,6 @@ local playerWon = false
 local whoseTurn = p1name
 
 local diceValue = nil
-
-local diceValuet = nil
-
 
 -- if its a draw
 
@@ -64,14 +65,23 @@ end
 
 local function rollTheDice()
 
-print('What number did you get on your dice, ' .. whoseTurn .. '?')
+print('Where rolling the dice for you, ' .. whoseTurn .. '!')
 
-diceValuet = io.read()
-
-diceValue = tonumber(diceValuet)
+diceValue = math.random(6)
 
 if whoseTurn == p1name then 
-    if diceValue == 1 then number1 = number1 - 1 elseif diceValue == 2 then number1 = number1 -2 elseif diceValue == 3 then number1 = number1 - 3 elseif diceValue == 4 then number1 = number1 + 1 elseif diceValue == 5 then number1 = number1 + 2 elseif diceValue == 6 then number1 = number1 + 3
+    if diceValue == 1 then 
+        number1 = number1 - 1 
+    elseif diceValue == 2 then 
+        number1 = number1 -2 
+    elseif diceValue == 3 then
+         number1 = number1 - 3 
+    elseif diceValue == 4 then
+         number1 = number1 + 1 
+    elseif diceValue == 5 then
+         number1 = number1 + 2 
+    elseif diceValue == 6 then
+         number1 = number1 + 3
     end
  end 
  if whoseTurn == p2name then
@@ -93,9 +103,3 @@ end
 end
 
 rollTheDice()
-
-
-
-
-
--- i went to 101 lines so i can fit the share link on zoom chat
