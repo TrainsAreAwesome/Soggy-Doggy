@@ -3,37 +3,41 @@
 -- game setup and inputs
 -- By Mwgie#8873
 
+-- Players table
+
+local players = { p1name = '', p2name = '', p1n = 0, p2 = 0} 
+
+-- Collecting player information
+
 print('this is only for 2 players at the moment! sorry')
 
 print("whats player 1's name?")
 
-local players = { p1name = '', p2name = '', } 
+players.p1name = io.read
 
 print("whats player 2s name?")
 
-local  = io.read()
+players.p2name = io.read()
+
+-- Starting the game
 
 print('Click enter to start!')
 
 io.read()
 
--- the game itself (rewriten)
+-- the game itself (rewriten, then half rewriten again)
 
--- other stuff
+-- Random number generator (from unix time i think)
 
 math.randomseed(os.time())
 
 -- variables
 
-local number1 = 0
-
-local number2 = 0
-
 local turnsTaken = 0
 
 local playerWon = false
 
-local whoseTurn = p1name
+local whoseTurn = p1
 
 local diceValue = nil
 
@@ -49,7 +53,7 @@ end
 
 local function p1wins()
 
-print(p1name .. ' has won!')
+print(players.p1name .. ' has won!')
 
 end
 
@@ -57,7 +61,7 @@ end
 
 local function p2wins()
 
-print(p2name .. ' has won!')
+print(players.p2name .. ' has won!')
 
 end
 
@@ -69,34 +73,45 @@ print('Where rolling the dice for you, ' .. whoseTurn .. '!')
 
 diceValue = math.random(6)
 
-if whoseTurn == p1name then 
+if whoseTurn == p1 then 
     if diceValue == 1 then 
-        number1 = number1 - 1 
+        players.p1n = players.p1n - 1 
     elseif diceValue == 2 then 
-        number1 = number1 -2 
+        players.p1n = players.p1n -2 
     elseif diceValue == 3 then
-         number1 = number1 - 3 
+         players.p1n = players.p1n -3 
     elseif diceValue == 4 then
-         number1 = number1 + 1 
+         players.p1n = players.p1n + 1 
     elseif diceValue == 5 then
-         number1 = number1 + 2 
+         players.p1n = players.p1n + 2 
     elseif diceValue == 6 then
-         number1 = number1 + 3
+         players.p1n = players.p1n + 3
     end
  end 
- if whoseTurn == p2name then
-     if diceValue == 1 then number2 = number2 - 1 elseif diceValue == 2 then number2 = number2 -2 elseif diceValue == 3 then number2 = number2 -3 elseif diceValue == 4 then number2 = number2 + 1 elseif diceValue == 5 then number2 = number2 + 2 elseif diceValue == 6 then number2 = number2 + 3
+ if whoseTurn == p2 then
+     if diceValue == 1 then
+           players.p2n = players.p2n - 1 
+     elseif diceValue == 2 then
+           players.p2n = players.p2n -2 
+     elseif diceValue == 3 then
+           players.p2n = players.p2n -3 
+     elseif diceValue == 4 then
+           players.p2n = players.p2n + 1 
+     elseif diceValue == 5 then
+           players.p2n = players.p2n + 2 
+     elseif diceValue == 6 then
+           players.p2n = players.p2n + 3
 
          end
 end
-if whoseTurn == p1name then whoseTurn = p2name else whoseTurn = p1name
+if whoseTurn == p1 then whoseTurn = p2 else whoseTurn = p2
 end
 turnsTaken = turnsTaken + 1 
 
 
 -- checking to see has somone won the game
 
-if number1 >= 7 then p2wins() elseif number2 >= 7 then p1wins() elseif turnsTaken >= 25 then gameEnd() else rollTheDice()
+if players.p1n >= 7 then p2wins() elseif players.p2n >= 7 then p1wins() elseif turnsTaken >= 25 then gameEnd() else rollTheDice()
 end
 
 
