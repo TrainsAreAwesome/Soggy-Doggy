@@ -61,7 +61,7 @@ end
 
 local function p2wins()
 
-print(players.p2name .. ' has won!')
+print(p2name .. ' has won!')
 
 end
 
@@ -88,7 +88,7 @@ if whoseTurn == p1 then
          players.p1n = players.p1n + 3
     end
  end 
- if whoseTurn == p2 then
+ if whoseTurn == p2name then
      if diceValue == 1 then
            players.p2n = players.p2n - 1 
      elseif diceValue == 2 then
