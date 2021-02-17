@@ -13,4 +13,6 @@ Update log:
 V1.3: Hopefully made the dice (and the game) work
 (there were some other versions that lasted like 10 minuits so i am not showing them here)
 V1.4: The game works!
-v1.4.1: Added a print so you know what your total number is after rolling the dice
+V1.4.1: Added a print so you know what your total number is after rolling the dice
+V1.4.2: Made the game work!
+V1.4.3: Bug fix
