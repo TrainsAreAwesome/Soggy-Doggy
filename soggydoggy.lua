@@ -5,7 +5,7 @@
 
 -- Players table
 
-local players = { p1name = '', p2name = '', p1n = 0, p2 = 0} 
+local players = { p1name = '', p2name = '', p1n = 0, p2n = 0} 
 
 -- Collecting player information
 
@@ -61,7 +61,7 @@ end
 
 local function p2wins()
 
-print(p2name .. ' has won!')
+print(players.p2name .. ' has won!')
 
 end
 
@@ -69,11 +69,15 @@ end
 
 local function rollTheDice()
 
-print('Where rolling the dice for you, ' .. whoseTurn .. '!')
+print('Click enter to roll the dice, ' .. whoseTurn .. '!')
+
+io.read()
 
 diceValue = math.random(6)
 
-if whoseTurn == p1name then 
+print('You got a ' .. tonumber(diceValue) .. ', ' .. whoseTurn .. '!')
+
+if whoseTurn == players.p1name then 
     if diceValue == 1 then 
         players.p1n = players.p1n - 1 
     elseif diceValue == 2 then 
@@ -88,7 +92,7 @@ if whoseTurn == p1name then
          players.p1n = players.p1n + 3
     end
  end 
- if whoseTurn == p2name then
+ if whoseTurn == players.p2name then
      if diceValue == 1 then
            players.p2n = players.p2n - 1 
      elseif diceValue == 2 then
@@ -104,10 +108,9 @@ if whoseTurn == p1name then
 
          end
 end
-if whoseTurn == players.p1name then whoseTurn = players.p2name else whoseTurn = players.p2name
+if whoseTurn == players.p1name then whoseTurn = players.p2name else whoseTurn = players.p1name
 end
 turnsTaken = turnsTaken + 1 
-
 
 -- checking to see has somone won the game
 
