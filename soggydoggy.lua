@@ -75,7 +75,7 @@ io.read()
 
 diceValue = math.random(6)
 
-print('You got a ' .. tonumber(diceValue) .. ', ' .. whoseTurn .. '!')
+print('You got a ' .. tostring(diceValue) .. ', ' .. whoseTurn .. '!')
 
 
       if whoseTurn == players.p1name then 
