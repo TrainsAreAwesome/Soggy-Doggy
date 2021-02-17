@@ -13,7 +13,7 @@ print('this is only for 2 players at the moment! sorry')
 
 print("whats player 1's name?")
 
-players.p1name = io.read
+players.p1name = io.read()
 
 print("whats player 2s name?")
 
