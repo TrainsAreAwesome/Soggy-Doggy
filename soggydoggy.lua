@@ -76,8 +76,12 @@ io.read()
 diceValue = math.random(6)
 
 print('You got a ' .. tonumber(diceValue) .. ', ' .. whoseTurn .. '!')
+if whoseTurn == players.p1name 
+then print('Your total number is ' .. tonumber(p1n) .. ', ' .. p1name .. '!') else 
+      print('Your total number is ' .. tonumber(p2n) .. ', ' .. p2name .. '!')
+end
 
-if whoseTurn == players.p1name then 
+      if whoseTurn == players.p1name then 
     if diceValue == 1 then 
         players.p1n = players.p1n - 1 
     elseif diceValue == 2 then 
