@@ -37,7 +37,7 @@ local turnsTaken = 0
 
 local playerWon = false
 
-local whoseTurn = p1
+local whoseTurn = players.p1name
 
 local diceValue = nil
 
@@ -73,7 +73,7 @@ print('Where rolling the dice for you, ' .. whoseTurn .. '!')
 
 diceValue = math.random(6)
 
-if whoseTurn == p1 then 
+if whoseTurn == p1name then 
     if diceValue == 1 then 
         players.p1n = players.p1n - 1 
     elseif diceValue == 2 then 
@@ -104,7 +104,7 @@ if whoseTurn == p1 then
 
          end
 end
-if whoseTurn == p1 then whoseTurn = p2 else whoseTurn = p2
+if whoseTurn == players.p1name then whoseTurn = players.p2name else whoseTurn = players.p2name
 end
 turnsTaken = turnsTaken + 1 
 
