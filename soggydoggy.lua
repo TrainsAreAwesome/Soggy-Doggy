@@ -12,7 +12,7 @@ local players = {
       p2n = 0 }      -- Player 2's total number
 
 -
-- Collecting player information and setup
+-- Collecting player information and setup
 
 print('this is only for 2 players at the moment! sorry')
 
