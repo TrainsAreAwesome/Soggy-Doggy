@@ -11,10 +11,18 @@ HOW TO PLAY:
 4 adds 1 to your total number. 5 adds 2 to your total number. 6 adds 3 to your total number (your total number can be less than 0)
 
 Update log:
+
+V1.5.1: The game works!
+
 V1.5: Cleaned up the players table and deleted a usless variable
+
 V1.4.3: Bug fix
+
 V1.4.2: Made the game work!
+
 V1.4.1: Added a print so you know what your total number is after rolling the dice
+
 V1.4: The game works!
 (there were some other versions that lasted like 10 minuits so i am not showing them here)
+
 V1.3: Hopefully made the dice (and the game) work
