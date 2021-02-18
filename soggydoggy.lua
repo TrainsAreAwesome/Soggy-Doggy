@@ -5,14 +5,14 @@
 
 -- Players table
 
-local players = {
-p1name = '',  -- Player 1's name
-p1n = 0,      -- Player 1's total number
-p2name = ''   -- Player 2's name
-p2n = 0       -- Player 2's total number
-}
+local players = { 
+      p1name = '',   -- Player 1's name
+      p1n = 0,       -- Player 1's total number
+      p2name = '',   -- Player 2's name
+      p2n = 0 }      -- Player 2's total number
 
--- Collecting player information and setup
+-
+- Collecting player information and setup
 
 print('this is only for 2 players at the moment! sorry')
 
