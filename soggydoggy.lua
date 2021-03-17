@@ -1,4 +1,6 @@
 -- the dog game from the learn page
+-- Writen by github.com/TrainsAreAwesome
+-- Go to clevercomputers.ie
 -- Soggy Doggy
 -- game setup and inputs
 -- By Mwgie#8873
